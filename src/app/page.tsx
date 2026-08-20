@@ -38,6 +38,51 @@ const parentServices = [
   "Online Examination",
 ];
 
+const digitalServices = [
+  {
+    category: "Parents",
+    title: "Admissions",
+    description:
+      "Discover programmes, requirements and begin the application process from any device.",
+    number: "01",
+  },
+  {
+    category: "Parents",
+    title: "School Fees",
+    description:
+      "Give parents a simple way to access fee information and payment guidance.",
+    number: "02",
+  },
+  {
+    category: "Parents",
+    title: "Academic Results",
+    description:
+      "A clearer digital pathway for parents to stay informed about student progress.",
+    number: "03",
+  },
+  {
+    category: "Students",
+    title: "E-Library",
+    description:
+      "Access learning resources and educational materials beyond the classroom.",
+    number: "04",
+  },
+  {
+    category: "Students",
+    title: "Online Examination",
+    description:
+      "A dedicated digital environment for modern assessment and examination experiences.",
+    number: "05",
+  },
+  {
+    category: "Students",
+    title: "Live Classroom",
+    description:
+      "Extend learning beyond the physical classroom with connected digital experiences.",
+    number: "06",
+  },
+];
+
 const academics = [
   {
     number: "01",
@@ -107,42 +152,40 @@ export default function Home() {
 
             {/* Desktop Navigation */}
 
-            <div className="hidden items-center gap-7 text-sm lg:flex">
-              <a
-                href="#about"
-                className="text-white/75 transition hover:text-white"
-              >
-                About
-              </a>
+            <a
+  href="#about"
+  className="text-white/75 transition hover:text-white"
+>
+  About
+</a>
 
-              <a
-                href="#academics"
-                className="text-white/75 transition hover:text-white"
-              >
-                Academics
-              </a>
+<a
+  href="#academics"
+  className="text-white/75 transition hover:text-white"
+>
+  Academics
+</a>
 
-              <a
-                href="#facilities"
-                className="text-white/75 transition hover:text-white"
-              >
-                Facilities
-              </a>
+<a
+  href="#digital"
+  className="text-white/75 transition hover:text-white"
+>
+  Digital
+</a>
 
-              <a
-                href="#parents"
-                className="text-white/75 transition hover:text-white"
-              >
-                Parents
-              </a>
+<a
+  href="#facilities"
+  className="text-white/75 transition hover:text-white"
+>
+  Facilities
+</a>
 
-              <a
-                href="#contact"
-                className="text-white/75 transition hover:text-white"
-              >
-                Contact
-              </a>
-            </div>
+<a
+  href="#contact"
+  className="text-white/75 transition hover:text-white"
+>
+  Contact
+</a>
 
             {/* Desktop CTA */}
 
@@ -194,6 +237,14 @@ export default function Home() {
                 </a>
 
                 <a
+                  href="#digital"
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-2xl px-4 py-4 font-medium text-white/80 transition hover:bg-white/5 hover:text-white"
+                >
+                  Digital Experience
+                </a>
+
+                <a
                   href="#facilities"
                   onClick={() => setMenuOpen(false)}
                   className="rounded-2xl px-4 py-4 font-medium text-white/80 transition hover:bg-white/5 hover:text-white"
@@ -225,6 +276,7 @@ export default function Home() {
                   className="rounded-full bg-[#d8e8a8] px-5 py-4 text-center font-bold text-[#10251d] transition active:scale-[0.98]"
                 >
                   Apply Now →
+
                 </Link>
               </div>
             </motion.div>
@@ -797,6 +849,214 @@ export default function Home() {
                 </span>
               </div>
             </motion.article>
+          </motion.div>
+        </div>
+      </section>
+
+            {/* =========================
+          DIGITAL SCHOOL EXPERIENCE
+      ========================== */}
+
+      <section
+        id="digital"
+        className="relative overflow-hidden bg-[#f7f8f6] py-20 sm:py-28"
+      >
+        {/* Decorative background */}
+
+        <div className="pointer-events-none absolute right-[-10%] top-20 h-72 w-72 rounded-full bg-[#d8e8a8]/30 blur-3xl" />
+
+        <div className="pointer-events-none absolute bottom-[-10%] left-[-10%] h-80 w-80 rounded-full bg-[#7da58e]/10 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-5">
+
+          {/* Header */}
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="max-w-3xl"
+          >
+            <div className="flex items-center gap-3">
+              <span className="h-2 w-2 rounded-full bg-[#6c8b76]" />
+
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#6c8b76]">
+                Digital School Experience
+              </p>
+            </div>
+
+            <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-6xl">
+              More than a website.
+
+              <span className="block text-[#6c8b76]">
+                A connected school experience.
+              </span>
+            </h2>
+
+            <p className="mt-6 max-w-2xl text-base leading-7 text-[#66736c] sm:text-lg sm:leading-8">
+              Give parents and students a simpler way to access the
+              information, resources and services that matter most.
+            </p>
+          </motion.div>
+
+          {/* Experience panels */}
+
+          <div className="mt-12 grid gap-5 lg:mt-16 lg:grid-cols-2">
+
+            {/* PARENT EXPERIENCE */}
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              className="group relative overflow-hidden rounded-[2rem] bg-[#10251d] p-7 text-white shadow-xl sm:p-9"
+            >
+              <div className="absolute right-[-50px] top-[-50px] h-40 w-40 rounded-full bg-[#d8e8a8]/10 blur-2xl transition duration-700 group-hover:scale-150" />
+
+              <div className="relative">
+
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#d8e8a8]">
+                      Parent experience
+                    </p>
+
+                    <h3 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                      Everything parents need.
+                    </h3>
+                  </div>
+
+                  <div className="hidden h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#d8e8a8] sm:flex">
+                    →
+                  </div>
+                </div>
+
+                <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  {digitalServices
+                    .filter((service) => service.category === "Parents")
+                    .map((service) => (
+                      <a
+                        href="/admissions"
+                        key={service.number}
+                        className="group/card rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.09]"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-white/30">
+                            {service.number}
+                          </span>
+
+                          <span className="text-white/30 transition group-hover/card:translate-x-1 group-hover/card:text-[#d8e8a8]">
+                            →
+                          </span>
+                        </div>
+
+                        <h4 className="mt-7 text-lg font-semibold">
+                          {service.title}
+                        </h4>
+
+                        <p className="mt-2 text-sm leading-6 text-white/40">
+                          {service.description}
+                        </p>
+                      </a>
+                    ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* STUDENT EXPERIENCE */}
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              className="group relative overflow-hidden rounded-[2rem] border border-[#10251d]/10 bg-white p-7 shadow-sm transition-all duration-500 hover:shadow-xl sm:p-9"
+            >
+              <div className="absolute right-[-50px] top-[-50px] h-40 w-40 rounded-full bg-[#d8e8a8]/30 blur-2xl transition duration-700 group-hover:scale-150" />
+
+              <div className="relative">
+
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6c8b76]">
+                      Student experience
+                    </p>
+
+                    <h3 className="mt-3 text-3xl font-semibold text-[#10251d] sm:text-4xl">
+                      Learning without limits.
+                    </h3>
+                  </div>
+
+                  <div className="hidden h-12 w-12 items-center justify-center rounded-full border border-[#10251d]/10 bg-[#f7f8f6] text-[#6c8b76] sm:flex">
+                    →
+                  </div>
+                </div>
+
+                <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  {digitalServices
+                    .filter((service) => service.category === "Students")
+                    .map((service) => (
+                      <a
+                        href="#contact"
+                        key={service.number}
+                        className="group/card rounded-2xl border border-[#10251d]/10 bg-[#f7f8f6] p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#e9eee8]"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-[#91a58f]">
+                            {service.number}
+                          </span>
+
+                          <span className="text-[#91a58f] transition group-hover/card:translate-x-1 group-hover/card:text-[#6c8b76]">
+                            →
+                          </span>
+                        </div>
+
+                        <h4 className="mt-7 text-lg font-semibold text-[#10251d]">
+                          {service.title}
+                        </h4>
+
+                        <p className="mt-2 text-sm leading-6 text-[#66736c]">
+                          {service.description}
+                        </p>
+                      </a>
+                    ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom statement */}
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="mt-5 rounded-[2rem] border border-[#10251d]/10 bg-[#e9eee8] p-7 sm:p-9"
+          >
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#6c8b76]">
+                  One connected experience
+                </p>
+
+                <p className="mt-3 max-w-2xl text-lg font-medium leading-7 text-[#10251d] sm:text-xl">
+                  From the first admission enquiry to everyday learning,
+                  everything should feel simple, clear and connected.
+                </p>
+              </div>
+
+              <Link
+                href="/admissions"
+                className="shrink-0 rounded-full bg-[#10251d] px-7 py-4 text-center text-sm font-bold text-white transition hover:-translate-y-1 hover:shadow-xl active:scale-[0.98]"
+              >
+                Explore Admissions →
+              </Link>
+
+            </div>
           </motion.div>
         </div>
       </section>
